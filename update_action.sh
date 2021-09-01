@@ -3,7 +3,7 @@
 set -e
 
 VERSION=$1
-GITHUB_TOKEN=$2
+token=$2
 if [ -z "$VERSION" ]; then
         echo "missing version"
         exit 1
@@ -23,6 +23,6 @@ git commit -m "release 1.1.0"
 echo "commited"
 git push origin master
 git --no-pager log -1
-ghr -u ${CIRCLE_PROJECT_USERNAME} -token $GITHUB_TOKEN -replace 1.1.0
+ghr -u ${CIRCLE_PROJECT_USERNAME} -token ${token} -replace 1.1.0
 popd
 rm -rf $repoPath
