@@ -3,7 +3,7 @@
 set -e
 
 VERSION=$1
-
+GITHUB_TOKEN=$2
 if [ -z "$VERSION" ]; then
         echo "missing version"
         exit 1
