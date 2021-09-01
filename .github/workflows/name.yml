@@ -21,4 +21,4 @@ jobs:
       - name: Assasa
         run: | 
           go get -u github.com/tcnksm/ghr
-          ./update_action.sh $GITHUB_REF $GITHUB_TOKEN
+          ./update_action.sh $GITHUB_REF

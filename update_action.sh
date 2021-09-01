@@ -3,7 +3,6 @@
 set -e
 
 VERSION=$1
-token=$2
 if [ -z "$VERSION" ]; then
         echo "missing version"
         exit 1
@@ -26,6 +25,6 @@ if [ $error -ne 1 ];then
   git push origin master
   git --no-pager log -1
 fi
-ghr -u ${CIRCLE_PROJECT_USERNAME} -token ${token} -replace 1.1.0
+ghr -u jlopezbarb -token ${GITHUB_TOKEN} -replace 1.1.0
 popd
 rm -rf $repoPath
