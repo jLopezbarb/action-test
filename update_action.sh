@@ -1,7 +1,7 @@
 
 #!/bin/bash
 set -e
-
+echo $2
 GITHUB_TOKEN=$2
 VERSION=$1
 if [ -z "$VERSION" ]; then
