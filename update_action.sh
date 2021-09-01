@@ -25,6 +25,6 @@ if [ $error -ne 1 ];then
   git push origin master
   git --no-pager log -1
 fi
-ghr -u jlopezbarb -token ${GITHUB_TOKEN} -replace 1.1.0
+ghr -token ${GITHUB_TOKEN} -replace 1.1.0
 popd
 rm -rf $repoPath
