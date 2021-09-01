@@ -19,7 +19,8 @@ sed -iE 's_FROM\ okteto\/okteto\:[[:digit:]]*\.[[:digit:]]*\.[[:digit:]]*_FROM\ 
 echo "Start sequence"
 git add .
 echo "Added"
-error=$(git commit -m "release 1.1.0" | 1)
+error=0
+git commit -m "release 1.1.0" || error=1
 if [ $error -ne 1 ];then
   echo "commited"
   git push origin master
