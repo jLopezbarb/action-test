@@ -11,7 +11,7 @@ fi
 
 repo="action-test"
 git fetch --all
-git checkout origin/master
+git checkout master
 git config user.name "jlopezbarb"
 git config user.email "jlopezbarb@gmail.com"
 sed -iE 's_FROM\ okteto\/okteto\:latest_FROM\ okteto\/okteto\:'$VERSION'_' Dockerfile
