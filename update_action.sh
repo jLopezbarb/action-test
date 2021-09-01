@@ -1,7 +1,8 @@
 
 #!/bin/bash
 set -e
-echo $GITHUB_TOKEN
+
+GITHUB_TOKEN=$2
 VERSION=$1
 if [ -z "$VERSION" ]; then
         echo "missing version"
