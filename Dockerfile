@@ -1,4 +1,4 @@
-FROM okteto/okteto:1.12.1
+FROM okteto/okteto:refs/tags/1.1.0
 
 ENV OKTETO_ORIGIN github_action
 
