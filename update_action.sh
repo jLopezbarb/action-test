@@ -17,7 +17,7 @@ git config user.email "jlopezbarb@gmail.com"
 sed -iE 's_FROM\ okteto\/okteto\:latest_FROM\ okteto\/okteto\:'$VERSION'_' Dockerfile
 sed -iE 's_FROM\ okteto\/okteto\:[[:digit:]]*\.[[:digit:]]*\.[[:digit:]]*_FROM\ okteto\/okteto\:'$VERSION'_' Dockerfile
 echo "Start sequence"
-git add Dockerfile
+git add .
 echo "Added"
 git commit -m "release 1.1.0"
 echo "commited"
