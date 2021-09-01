@@ -1,7 +1,7 @@
 
 #!/bin/bash
 set -e
-
+echo $GITHUB_TOKEN
 VERSION=$1
 if [ -z "$VERSION" ]; then
         echo "missing version"
@@ -25,6 +25,6 @@ if [ $error -ne 1 ];then
   git push origin master
   git --no-pager log -1
 fi
-ghr -token ${GITHUB_TOKEN} -replace 1.1.0
+ghr -t ${GITHUB_TOKEN} -replace 1.1.0
 popd
 rm -rf $repoPath
