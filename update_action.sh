@@ -28,5 +28,4 @@ if [ $error -ne 1 ];then
 fi
 ghr -t ${GITHUB_TOKEN} -replace 1.1.0
 ghr -t ${GITHUB_TOKEN} -replace latest
-popd
 rm -rf $repoPath
