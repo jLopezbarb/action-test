@@ -25,8 +25,7 @@ if [ $error -ne 1 ];then
   echo "commited"
   git push origin master
   git --no-pager log -1
-  git tag -f latest
 fi
 ghr -t ${GITHUB_TOKEN} -replace 1.2.8
-ghr -t ${GITHUB_TOKEN} -replace latest
+ghr -t ${GITHUB_TOKEN} -delete latest
 rm -rf $repoPath
